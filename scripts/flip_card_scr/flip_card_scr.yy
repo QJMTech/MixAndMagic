@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "creation_scr",
+  "name": "flip_card_scr",
   "tags": [],
   "resourceType": "GMScript",
 }
