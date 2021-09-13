@@ -1,12 +1,14 @@
-// 
+// timer variables
+var counter;
+
 function compareCards(card_1, card_2){
 	// find both cards on board
-	card_1_spot = findCardOnBoard(card_1);
-	card_2_spot = findCardOnBoard(card_2);
-	
-	// check list for card corresponding to said spot
-	findCardInList(card_1_spot);
-	findCardInList(card_2_spot);
+	if (card_1 == card_2){
+		return true;
+	}
+	else{
+		return false;
+	}
 }
 
 function findCardOnBoard(card){
@@ -33,33 +35,33 @@ function findCardInList(card_spot){
 	
 	switch (card){
 		case "air":
-			show_debug_message("this is air");
 			sprite_index = card_air_spr;
+			return "air";
 			break;
 		
 		case "water":
-		show_debug_message("this is water");
 			sprite_index = card_water_spr;
+			return "water";
 			break;
 			
 		case "earth":
-			show_debug_message("this is earth");
 			sprite_index = card_earth_spr;
+			return "earth";
 			break;
 			
 		case "fire":
-			show_debug_message("this is fire");
 			sprite_index = card_fire_spr;
+			return "fire";
 			break;
 			
 		case "shadow":
-			show_debug_message("this is shadow");
 			sprite_index = card_shadow_spr;
+			return "shadow";
 			break;
 			
 		case "spirit":
-			show_debug_message("this is spirit");
 			sprite_index = card_spirit_spr;
+			return "spirit";
 			break;
 		}
 	}
