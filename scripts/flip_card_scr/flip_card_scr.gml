@@ -13,6 +13,7 @@ function flipCard(){
 	if (firstCard){
 		// set card2 to id clicked on
 		card1 = id;
+		show_debug_message(string(card1));
 		
 		// find and display card on board
 		card1PositionOnBoard = findCardOnBoard(card1);
@@ -21,7 +22,7 @@ function flipCard(){
 		
 		// change firstCard to false
 		firstCard = false;
-	}
+		}
 	else{
 		// set card2 to id clicked on
 		card2 = id;
@@ -33,14 +34,15 @@ function flipCard(){
 		
 		// compare this card to first card
 		if (compareCards(card1ID, card2ID)){
-			
-		}
+			var instance_lyr = layer_get_id("Instances_1");
+			instance_create_layer(0, 0, instance_lyr, Alarm1);
+			}
 		else{
-			card1.sprite_index = card_back_spr;
-			card2.sprite_index = card_back_spr;
-		}
+			var instance_lyr = layer_get_id("Instances_1");
+			instance_create_layer(0, 0, instance_lyr, Alarm0);
+			}
 		
 		// reset firstCard to true to enable check for next pair
 		firstCard = true;
+		}
 	}
-}

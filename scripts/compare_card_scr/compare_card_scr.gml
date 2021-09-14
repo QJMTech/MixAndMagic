@@ -1,6 +1,3 @@
-// timer variables
-var counter;
-
 function compareCards(card_1, card_2){
 	// find both cards on board
 	if (card_1 == card_2){
@@ -51,6 +48,7 @@ function findCardInList(card_spot){
 			
 		case "fire":
 			sprite_index = card_fire_spr;
+			show_debug_message("dis da hot boi");
 			return "fire";
 			break;
 			
