@@ -19,11 +19,11 @@
 	var instance_lyr = layer_get_id("Instances_1");
 
 // create cards on board
-xx = 0;
+xx = 10;
 // outer loop along width
 for (i = 0; i < boardWidth; i++){
 	// inner loop along height
-	yy = 300;
+	yy = 350;
 	for (j = 0; j < boardHeight; j++) {
 		// create card
 		board[i, j] = instance_create_layer(xx, yy, instance_lyr, card_obj);
@@ -33,7 +33,7 @@ for (i = 0; i < boardWidth; i++){
 		}
 		
 		// offset new card by width of old card plus distance in between cards
-		xx += sprite_get_width(card_back_spr);
+		xx += sprite_get_width(card_back_spr) - 10;
 	}
 	
 // randomize deck order
