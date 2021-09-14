@@ -6,8 +6,6 @@
 	globalvar boardWidth, boardHeight;
 	boardWidth = 4;
 	boardHeight = 3;
-
-	// vars for card comparison
 	
 	// vars for deck
 	globalvar deck;
@@ -21,11 +19,11 @@
 	var instance_lyr = layer_get_id("Instances_1");
 
 // create cards on board
-xx = 0;
+xx = 10;
 // outer loop along width
 for (i = 0; i < boardWidth; i++){
 	// inner loop along height
-	yy = 300;
+	yy = 350;
 	for (j = 0; j < boardHeight; j++) {
 		// create card
 		board[i, j] = instance_create_layer(xx, yy, instance_lyr, card_obj);
@@ -35,7 +33,7 @@ for (i = 0; i < boardWidth; i++){
 		}
 		
 		// offset new card by width of old card plus distance in between cards
-		xx += sprite_get_width(card_back_spr);
+		xx += sprite_get_width(card_back_spr) - 10;
 	}
 	
 // randomize deck order
@@ -48,11 +46,10 @@ ds_list_add(deck, "air", "air",
 
 // randomize deck order
 randomize();
-ds_list_shuffle(deck);
-ds_list_shuffle(deck);
-ds_list_shuffle(deck);
-ds_list_shuffle(deck);
-ds_list_shuffle(deck);
+for (i = 0; i < 10; i++){
+	ds_list_shuffle(deck);
+	}
+
 
 show_debug_message(string(ds_list_size(deck)));
 for (i = 0; i < 12; i++;){
