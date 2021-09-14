@@ -1,1 +1,0 @@
-audio_play_sound(bgm_music, 1, true);
