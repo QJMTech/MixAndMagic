@@ -10,6 +10,7 @@ var card1PositionOnBoard, card2PositionOnBoard;
 
 // flip over cards and save values
 function flipCard(){
+
 	if (firstCard){
 		// set card2 to id clicked on
 		card1 = id;
