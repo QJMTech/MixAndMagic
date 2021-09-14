@@ -34,16 +34,11 @@
     {"id":{"name":"Alarm1","path":"objects/Alarm1/Alarm1.yy",},"order":5,},
     {"id":{"name":"magic_sparklez_spr","path":"sprites/magic_sparklez_spr/magic_sparklez_spr.yy",},"order":12,},
     {"id":{"name":"card_water_glow_vfx","path":"sprites/card_water_glow_vfx/card_water_glow_vfx.yy",},"order":7,},
-    {"id":{"name":"bgm_music","path":"sounds/bgm_music/bgm_music.yy",},"order":0,}
     {"id":{"name":"flip_card_scr","path":"scripts/flip_card_scr/flip_card_scr.yy",},"order":1,},
-    {"id":{"name":"card_spirit_glow_vfx","path":"sprites/card_spirit_glow_vfx/card_spirit_glow_vfx.yy",},"order":3,},
-    {"id":{"name":"mainmenu_rm","path":"rooms/mainmenu_rm/mainmenu_rm.yy",},"order":1,},
-    {"id":{"name":"spirit_merged_spr","path":"sprites/spirit_merged_spr/spirit_merged_spr.yy",},"order":20,},
-    {"id":{"name":"mainmenu_obj","path":"objects/mainmenu_obj/mainmenu_obj.yy",},"order":4,},
-    {"id":{"name":"pausemenu_overlay_background_spr","path":"sprites/pausemenu_overlay_background_spr/pausemenu_overlay_background_spr.yy",},"order":13,},
-    {"id":{"name":"stones_obj","path":"objects/stones_obj/stones_obj.yy",},"order":6,},
-    {"id":{"name":"gametitle_TEMP_spr","path":"sprites/gametitle_TEMP_spr/gametitle_TEMP_spr.yy",},"order":9,},
-    {"id":{"name":"glow_effect_obj","path":"objects/glow_effect_obj/glow_effect_obj.yy",},"order":8,},
+    {"id":{"name":"card_spirit_glow_vfx","path":"sprites/card_spirit_glow_vfx/card_spirit_glow_vfx.yy",},"order":5,},
+    {"id":{"name":"spirit_merged_spr","path":"sprites/spirit_merged_spr/spirit_merged_spr.yy",},"order":22,},
+    {"id":{"name":"pausemenu_overlay_background_spr","path":"sprites/pausemenu_overlay_background_spr/pausemenu_overlay_background_spr.yy",},"order":15,},
+    {"id":{"name":"gametitle_TEMP_spr","path":"sprites/gametitle_TEMP_spr/gametitle_TEMP_spr.yy",},"order":11,},
     {"id":{"name":"board_rm","path":"rooms/board_rm/board_rm.yy",},"order":0,},
   ],
   "Options": [
@@ -58,7 +53,6 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"mainmenu_rm","path":"rooms/mainmenu_rm/mainmenu_rm.yy",},},
     {"roomId":{"name":"board_rm","path":"rooms/board_rm/board_rm.yy",},},
   ],
   "Folders": [
@@ -85,7 +79,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.3.574",
+    "IDEVersion": "2.3.4.577",
   },
   "resourceVersion": "1.4",
   "name": "Mix_And_Magic",

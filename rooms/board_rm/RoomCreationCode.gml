@@ -17,20 +17,13 @@
 	
 	// initialize instance
 	var instance_lyr = layer_get_id("Instances_1");
-	var background_objects_lyr = layer_get_id("Instances_2");
-	
-// create exit menu object
-instance_create_layer(550, 0, background_objects_lyr, pausegame_button);
-
-// create stone icons
-instance_create_layer(25, 100, background_objects_lyr, stones_obj);
 
 // create cards on board
 xx = 0;
 // outer loop along width
 for (i = 0; i < boardWidth; i++){
 	// inner loop along height
-	yy = 350;
+	yy = 300;
 	for (j = 0; j < boardHeight; j++) {
 		// create card
 		board[i, j] = instance_create_layer(xx, yy, instance_lyr, card_obj);
