@@ -6,8 +6,6 @@
 	globalvar boardWidth, boardHeight;
 	boardWidth = 4;
 	boardHeight = 3;
-
-	// vars for card comparison
 	
 	// vars for deck
 	globalvar deck;
@@ -48,11 +46,10 @@ ds_list_add(deck, "air", "air",
 
 // randomize deck order
 randomize();
-ds_list_shuffle(deck);
-ds_list_shuffle(deck);
-ds_list_shuffle(deck);
-ds_list_shuffle(deck);
-ds_list_shuffle(deck);
+for (i = 0; i < 10; i++){
+	ds_list_shuffle(deck);
+	}
+
 
 show_debug_message(string(ds_list_size(deck)));
 for (i = 0; i < 12; i++;){

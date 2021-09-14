@@ -1,30 +1,15 @@
-// 
 function compareCards(card_1, card_2){
 	// find both cards on board
-	card_1_spot = findCardOnBoard(card_1);
-	card_2_spot = findCardOnBoard(card_2);
-	
-	// check list for card corresponding to said spot
-	findCardInList(card_1_spot);
-	findCardInList(card_2_spot);
-}
-
-function findCardOnBoard(card){
-	// declare variables
-	var cardPosition, tempPosition, i, j;
-	cardPosition = 0;
-	tempPosition = 0;
-	
-	for (i = 0; i < boardWidth; i++;){
-		for (j = 0; j < boardHeight; j++){
-			if (board[i,j] == card){
-				cardPosition = tempPosition;
-				return tempPosition;
-			}
-		tempPosition++;
-		}
+	if (card_1 == card_2){
+		var instance_lyr = layer_get_id("Instances_1");
+		instance_create_layer(0, 0, instance_lyr, Alarm1);
+	}
+	else{
+		var instance_lyr = layer_get_id("Instances_1");
+		instance_create_layer(0, 0, instance_lyr, Alarm0);
 	}
 }
+
 
 function findCardInList(card_spot){
 	// declare variables
@@ -33,33 +18,34 @@ function findCardInList(card_spot){
 	
 	switch (card){
 		case "air":
-			show_debug_message("this is air");
 			sprite_index = card_air_spr;
+			return "air";
 			break;
 		
 		case "water":
-		show_debug_message("this is water");
 			sprite_index = card_water_spr;
+			return "water";
 			break;
 			
 		case "earth":
-			show_debug_message("this is earth");
 			sprite_index = card_earth_spr;
+			return "earth";
 			break;
 			
 		case "fire":
-			show_debug_message("this is fire");
 			sprite_index = card_fire_spr;
+			show_debug_message("dis da hot boi");
+			return "fire";
 			break;
 			
 		case "shadow":
-			show_debug_message("this is shadow");
 			sprite_index = card_shadow_spr;
+			return "shadow";
 			break;
 			
 		case "spirit":
-			show_debug_message("this is spirit");
 			sprite_index = card_spirit_spr;
+			return "spirit";
 			break;
 		}
 	}
