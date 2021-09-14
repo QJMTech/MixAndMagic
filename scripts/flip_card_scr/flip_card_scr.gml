@@ -26,6 +26,9 @@ function flipCard(){
 		// set card2 to id clicked on
 		card2 = id;
 		
+		// check to ensure its not the same card ID
+		if (card1 != card2){
+		
 		// find and display card on board
 		card2PositionOnBoard = id - 100001;
 		show_debug_message(string(card2PositionOnBoard));
@@ -49,5 +52,6 @@ function flipCard(){
 			// method: checkWin
 			
 			// 
+			}
 		}
 	}

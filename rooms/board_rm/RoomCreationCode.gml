@@ -6,8 +6,6 @@
 	globalvar boardWidth, boardHeight;
 	boardWidth = 4;
 	boardHeight = 3;
-
-	// vars for card comparison
 	
 	// vars for deck
 	globalvar deck;
