@@ -1,43 +1,58 @@
 // Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// declare variables
+globalvar firstCard, card1, card2, card1ID, card2ID;
+firstCard = true;
+
+var position, cardIndex, i, j;
+position = 0;
+cardIndex = 0;
+var card1PositionOnBoard, card2PositionOnBoard;
+
+// flip over cards and save values
 function flipCard(){
-	
-	// id of instance gets converted to list(deck) id
-	var offset_of_instances = 5;
-	var temp_id = id - 100000 - offset_of_instances;
-	
-	// If the sprite index is the back of the card, flip to correct card_face
-	if(sprite_index == card_back_spr)
-	{
-		if(ds_list_find_value(deck, temp_id) == "air")
-		{
-			sprite_index = card_air_spr;
+
+	if (firstCard){
+		// set card2 to id clicked on
+		card1 = id;
+		
+		// find and display card on board
+		card1PositionOnBoard = id - 100001;
+		
+		card1ID = findCardInList(card1PositionOnBoard);
+		
+		// change firstCard to false
+		firstCard = false;
 		}
-		if(ds_list_find_value(deck, temp_id) == "fire")
-		{
-			sprite_index = card_fire_spr;
-		}
-		if(ds_list_find_value(deck, temp_id) == "earth")
-		{
-			sprite_index = card_earth_spr;
-		}
-		if(ds_list_find_value(deck, temp_id) == "water")
-		{
-			sprite_index = card_water_spr;
-		}
-		if(ds_list_find_value(deck, temp_id) == "spirit")
-		{
-			id.sprite_index = card_spirit_spr;
-		}
-		if(ds_list_find_value(deck, temp_id) == "shadow")
-		{
-			id.sprite_index = card_shadow_spr;
+	else{
+		// set card2 to id clicked on
+		card2 = id;
+		
+		// check to ensure its not the same card ID
+		if (card1 != card2){
+		
+		// find and display card on board
+		card2PositionOnBoard = id - 100001;
+		show_debug_message(string(card2PositionOnBoard));
+		
+		card2ID = findCardInList(card2PositionOnBoard);
+		
+		// compare this card to first card
+		compareCards(card1ID, card2ID);
+		
+		// reset firstCard to true to enable check for next pair
+		// increment turn counter
+		firstCard = true;
+		
+		// check for shuffle condition
+		
+			// method: checkShuffle
+			
+			
+		// check for win condition
+			
+			// method: checkWin
+			
+			// 
+			}
 		}
 	}
-	// Otherwise, filp to back of card
-	else
-	{
-		sprite_index = card_back_spr;
-	}
-	
-}
