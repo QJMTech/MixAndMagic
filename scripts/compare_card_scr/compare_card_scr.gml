@@ -1,29 +1,15 @@
 function compareCards(card_1, card_2){
 	// find both cards on board
 	if (card_1 == card_2){
-		return true;
+		var instance_lyr = layer_get_id("Instances_1");
+		instance_create_layer(0, 0, instance_lyr, Alarm1);
 	}
 	else{
-		return false;
+		var instance_lyr = layer_get_id("Instances_1");
+		instance_create_layer(0, 0, instance_lyr, Alarm0);
 	}
 }
 
-function findCardOnBoard(card){
-	// declare variables
-	var cardPosition, tempPosition, i, j;
-	cardPosition = 0;
-	tempPosition = 0;
-	
-	for (i = 0; i < boardWidth; i++;){
-		for (j = 0; j < boardHeight; j++){
-			if (board[i,j] == card){
-				cardPosition = tempPosition;
-				return tempPosition;
-			}
-		tempPosition++;
-		}
-	}
-}
 
 function findCardInList(card_spot){
 	// declare variables
