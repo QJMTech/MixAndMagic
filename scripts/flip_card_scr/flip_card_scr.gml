@@ -43,12 +43,10 @@ function flipCard(){
 		firstCard = true;
 		
 		// check for shuffle condition
-		
 			// method: checkShuffle
-			
+		checkShuffle();
 			
 		// check for win condition
-			
 			// method: checkWin
 			
 			// 

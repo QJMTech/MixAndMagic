@@ -17,6 +17,12 @@
 	
 	// initialize instance
 	var instance_lyr = layer_get_id("Instances_1");
+	
+	// variable for turn count and shuffle count
+	globalvar turnCount;
+	turnCount = 0;
+	globalvar turnsToShuffle;
+	turnsToShuffle = 5;
 
 // create cards on board
 xx = 10;
