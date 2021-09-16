@@ -1,7 +1,8 @@
 // game initialization script
 
 // declare variables and initialize
-
+		
+	
 	// width x height of board
 	globalvar boardWidth, boardHeight;
 	boardWidth = 4;
