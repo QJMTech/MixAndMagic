@@ -69,7 +69,6 @@
     {"id":{"name":"card_water_glow_vfx","path":"sprites/card_water_glow_vfx/card_water_glow_vfx.yy",},"order":7,},
     {"id":{"name":"bgm_music","path":"sounds/bgm_music/bgm_music.yy",},"order":0,}
     {"id":{"name":"flip_card_scr","path":"scripts/flip_card_scr/flip_card_scr.yy",},"order":1,},
-<<<<<<< Updated upstream
     {"id":{"name":"card_spirit_glow_vfx","path":"sprites/card_spirit_glow_vfx/card_spirit_glow_vfx.yy",},"order":3,},
     {"id":{"name":"mainmenu_rm","path":"rooms/mainmenu_rm/mainmenu_rm.yy",},"order":1,},
     {"id":{"name":"spirit_merged_spr","path":"sprites/spirit_merged_spr/spirit_merged_spr.yy",},"order":20,},
@@ -78,7 +77,6 @@
     {"id":{"name":"stones_obj","path":"objects/stones_obj/stones_obj.yy",},"order":6,},
     {"id":{"name":"gametitle_TEMP_spr","path":"sprites/gametitle_TEMP_spr/gametitle_TEMP_spr.yy",},"order":9,},
     {"id":{"name":"glow_effect_obj","path":"objects/glow_effect_obj/glow_effect_obj.yy",},"order":8,},
-=======
     {"id":{"name":"magic_sparklez_TEMP_spr","path":"sprites/magic_sparklez_TEMP_spr/magic_sparklez_TEMP_spr.yy",},"order":36,},
     {"id":{"name":"card_spirit_glow_vfx","path":"sprites/card_spirit_glow_vfx/card_spirit_glow_vfx.yy",},"order":5,},
     {"id":{"name":"spirit_merged_spr","path":"sprites/spirit_merged_spr/spirit_merged_spr.yy",},"order":22,},
@@ -87,7 +85,6 @@
     {"id":{"name":"gametitle_TEMP_spr","path":"sprites/gametitle_TEMP_spr/gametitle_TEMP_spr.yy",},"order":11,},
     {"id":{"name":"water_element_obj","path":"objects/water_element_obj/water_element_obj.yy",},"order":17,},
     {"id":{"name":"bgm","path":"sounds/bgm/bgm.yy",},"order":0,},
->>>>>>> Stashed changes
     {"id":{"name":"board_rm","path":"rooms/board_rm/board_rm.yy",},"order":0,},
   ],
   "Options": [
