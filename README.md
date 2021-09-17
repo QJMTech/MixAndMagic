@@ -26,4 +26,4 @@ No bugs or issues at all.
 
 *Quinn Melssen: Game direction and Game logic programming, pair programming
 *Max Mosier: Made sprites and animations, audio programming, pair programming, graphics programming
-*Jaime Jair Garcia Gomez: Pair programming, sound effects, and music.
+*Jaime Jair Garcia Gomez: Pair programming, sound effects, and music, Tweening.
