@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"progressbar_fill_glow_vfx_spr","path":"sprites/progressbar_fill_glow_vfx_spr/progressbar_fill_glow_vfx_spr.yy",},"order":19,},
+    {"id":{"name":"Alarm3","path":"objects/Alarm3/Alarm3.yy",},"order":17,},
     {"id":{"name":"card_back_spr","path":"sprites/card_back_spr/card_back_spr.yy",},"order":30,},
     {"id":{"name":"card_air_spr","path":"sprites/card_air_spr/card_air_spr.yy",},"order":28,},
     {"id":{"name":"table_background_spr","path":"sprites/table_background_spr/table_background_spr.yy",},"order":25,},

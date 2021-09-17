@@ -2,5 +2,5 @@
 // You can write your code in this editor
 
 
-globalvar cantFlip;
+globalvar cantFlip, cantFlip2;
 cantFlip = false;

@@ -1,23 +1,19 @@
 // Script assets have changed for v2.3.0 see
 // declare variables
-globalvar firstCard, card1, card2, card1ID, card2ID;
+globalvar firstCard, card1, card2, cardAttribute;
 firstCard = true;
-
-var position, cardIndex, i, j;
-position = 0;
-cardIndex = 0;
-var card1PositionOnBoard, card2PositionOnBoard;
 
 // flip over cards and save values
 function flipCard(){
+	cardsDestroyed = false;
 	if (firstCard){
-		// set card2 to id clicked on
+		// set card1 to id clicked on
 		card1 = id;
 		
-		// find and display card on board
-		card1PositionOnBoard = id - 100005;
+		// display attribute
+		displayAttribute(card1);
 		
-		card1ID = findCardInList(card1PositionOnBoard);
+		
 		
 		// change firstCard to false
 		firstCard = false;
@@ -26,17 +22,14 @@ function flipCard(){
 		// set card2 to id clicked on
 		card2 = id;
 		
+		// display attribute
+		displayAttribute(card2);
+		
 		// check to ensure its not the same card ID
 		if (card1 != card2){
 		
-		// find and display card on board
-		card2PositionOnBoard = id - 100005;
-		show_debug_message(string(card2PositionOnBoard));
-		
-		card2ID = findCardInList(card2PositionOnBoard);
-		
 		// compare this card to first card
-		compareCards(card1ID, card2ID);
+		compareCards(card1, card2);
 		
 		// reset firstCard to true to enable check for next pair
 		// increment turn counter
@@ -45,10 +38,11 @@ function flipCard(){
 		// check for shuffle condition
 			// method: checkShuffle
 		checkShuffle();
+		
 			
 		// check for win condition
 			// method: checkWin
-			
+		checkWin();
 			// 
 			}
 		}

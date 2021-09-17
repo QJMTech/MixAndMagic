@@ -1,5 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-// changes the image after the animation time
-setCorrectImage(cardAttribute);
+alarm[3] = 120;
