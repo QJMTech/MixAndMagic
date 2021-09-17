@@ -1,9 +1,17 @@
 function compareCards(card_1, card_2){
 	// find both cards on board
-	if (card_1 == card_2){
+	if (card_1.attribute == card_2.attribute){
+		// get the object
 		var instance_lyr = layer_get_id("Instances_1");
+		
+		// kill the object
 		instance_create_layer(0, 0, instance_lyr, Alarm1);
+		
+		// delete corresponding items in attribute list
+		ds_list_delete(attributes,ds_list_find_index(attributes, card1.attribute));
+		ds_list_delete(attributes,ds_list_find_index(attributes, card1.attribute));
 	}
+	
 	else{
 		var instance_lyr = layer_get_id("Instances_1");
 		instance_create_layer(0, 0, instance_lyr, Alarm0);
@@ -110,12 +118,12 @@ function playMatchSound(card_type)
 		}
 }
 
-function findCardInList(card_spot){
+function displayAttribute(card_1){
 	// declare variables
-	var card;
-	card = ds_list_find_value(deck, card_spot);
+	cardAttribute = card_1.attribute;
 	
-	switch (card){
+
+	switch (cardAttribute){
 		case "air":
 			sprite_index = card_air_spr;
 			return "air";
@@ -133,7 +141,6 @@ function findCardInList(card_spot){
 			
 		case "fire":
 			sprite_index = card_fire_spr;
-			show_debug_message("dis da hot boi");
 			return "fire";
 			break;
 			

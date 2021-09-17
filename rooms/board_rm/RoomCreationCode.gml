@@ -1,64 +1,73 @@
 // game initialization script
 
 // declare variables and initialize
-
-	// width x height of board
-	globalvar boardWidth, boardHeight;
-	boardWidth = 4;
-	boardHeight = 3;
 	
-	// vars for deck
+	// misc
+	globalvar randomInt;
+	globalvar cardsDestroyed;
+	cardsDestroyed = false;
+	
+	// vars for deck and attributes
 	globalvar deck;
 	deck = ds_list_create();
 	
+	globalvar attributes;
+	attributes = ds_list_create();
+	
 	// vars for board
 	globalvar board;
-	var xx, yy, i, j;
+	var xx, yy, i;
 	
 	// initialize instance
-	var instance_lyr = layer_get_id("Instances_1");
+	globalvar instance_lyr; 
+	instance_lyr = layer_get_id("Instances_1");
 	
 	// variable for turn count and shuffle count
 	globalvar turnCount;
 	turnCount = 0;
 	globalvar turnsToShuffle;
 	turnsToShuffle = 5;
-
-// create cards on board
-xx = 10;
-// outer loop along width
-for (i = 0; i < boardWidth; i++){
-	// inner loop along height
-	yy = 350;
-	for (j = 0; j < boardHeight; j++) {
-		// create card
-		board[i, j] = instance_create_layer(xx, yy, instance_lyr, card_obj);
-		
-		// offset new card by size of old card plus distance in between cards
-		yy += sprite_get_height(card_back_spr);
-		}
-		
-		// offset new card by width of old card plus distance in between cards
-		xx += sprite_get_width(card_back_spr) - 10;
-	}
 	
-// randomize deck order
-ds_list_add(deck, "air", "air", 
+	cantFlip2 = false;
+	
+	
+// create attribute list to assign to card objs
+ds_list_add(attributes, "air", "air", 
 				  "earth", "earth", 
 				  "fire", "fire", 
 				  "water", "water", 
 				  "spirit", "spirit", 
 				  "shadow", "shadow");
 
+
+randomise();
+randomInt = irandom(50);
 // randomize deck order
-randomize();
-for (i = 0; i < 10; i++){
-	ds_list_shuffle(deck);
-	}
+for (i = 0; i < randomInt; i++){
+	// shuffle list of object instances
+	ds_list_shuffle(attributes);
+}
 
 
-show_debug_message(string(ds_list_size(deck)));
-for (i = 0; i < 12; i++;){
-	show_debug_message(ds_list_find_value(deck, i));
+// initial coordinate offset
+xx = 10;
+yy = 350;
+
+// create cards on board
+for (i = 0; i < 12; i++){
+	if (i % 4 == 0 && i != 0){
+		yy += sprite_get_height(card_back_spr);	
+		xx = 10;
 	}
-				  
+	
+	// create cards and add to deck
+	ds_list_add(deck, instance_create_layer(xx, yy, instance_lyr, card_obj));
+	
+	// assign attribute to card using attribute list
+	ds_list_find_value(deck, i).attribute = ds_list_find_value(attributes, i);
+		
+	// offset new card by size of old card plus distance in between cards
+	xx += sprite_get_width(card_back_spr) - 10;
+}
+
+
