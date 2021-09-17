@@ -15,7 +15,7 @@ function flipCard(){
 		card1 = id;
 		
 		// find and display card on board
-		card1PositionOnBoard = id - 100001;
+		card1PositionOnBoard = id - 100005;
 		
 		card1ID = findCardInList(card1PositionOnBoard);
 		
@@ -30,7 +30,7 @@ function flipCard(){
 		if (card1 != card2){
 		
 		// find and display card on board
-		card2PositionOnBoard = id - 100001;
+		card2PositionOnBoard = id - 100005;
 		show_debug_message(string(card2PositionOnBoard));
 		
 		card2ID = findCardInList(card2PositionOnBoard);
