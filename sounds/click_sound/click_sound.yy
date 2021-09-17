@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "not_a_match.wav",
-  "duration": 1.434376,
+  "soundFile": "click_sound.wav",
+  "duration": 0.491633,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "not_a_match",
+  "name": "click_sound",
   "tags": [],
   "resourceType": "GMSound",
 }

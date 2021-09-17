@@ -53,6 +53,10 @@ function shuffle(){
 	// prevent flip while cards being shuffled
 	cantFlip2 = true;
 	
+	// play shuffle sound
+	audio_play_sound(shuffle_sound, 3, false);
+	
+	// create alarm with shuffle card
 	instance_create_layer(0, 0, "Game_Objects", Alarm3)
 }
 

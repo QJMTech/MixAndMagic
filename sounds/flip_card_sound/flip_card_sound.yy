@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "bgm.wav",
-  "duration": 20.9918365,
+  "soundFile": "flip_card_sound.wav",
+  "duration": 0.339728,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "bgm",
+  "name": "flip_card_sound",
   "tags": [],
   "resourceType": "GMSound",
 }

@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "flip_card.wav",
-  "duration": 0.339728,
+  "soundFile": "winSong_mixdown_sound.wav",
+  "duration": 6.129116,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "flip_card",
+  "name": "winSong_mixdown_sound",
   "tags": [],
   "resourceType": "GMSound",
 }
