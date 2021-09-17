@@ -17,8 +17,38 @@ function checkShuffle(){
 		// increment turn count by 1
 		turnCount += 1
 	}
+	
+	changeTurnCounter();
 }
 
+function changeTurnCounter(){
+		switch (turnsToShuffle - turnCount){
+			case 5:
+				number_obj.sprite_index = number_6_spr;
+				break;
+				
+			case 4:
+				number_obj.sprite_index = number_5_spr;
+				break;
+				
+			case 3:
+				number_obj.sprite_index = number_4_spr;
+				break;
+				
+			case 2:
+				number_obj.sprite_index = number_3_spr;
+				break;
+				
+			case 1:
+				number_obj.sprite_index = number_2_spr;
+				break;
+				
+			case 0:
+				number_obj.sprite_index = number_1_spr;
+				break;
+		}
+	}
+	
 function shuffle(){
 	// prevent flip while cards being shuffled
 	cantFlip2 = true;
@@ -28,6 +58,6 @@ function shuffle(){
 
 function checkWin(){
 	if (ds_list_size(attributes) == 0){
-		show_debug_message(string("You win bitch"));
+		instance_create_layer(0, 0, "Game_Objects", Alarm4);
 	}
 }
